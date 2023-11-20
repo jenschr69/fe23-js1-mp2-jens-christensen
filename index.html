@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sten, sax och papper</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Sten, sax och papper</h1>
+    </header>
+
+    <main>
+      <form action="">
+        <input type="text" placeholder="Spelarnamn" />
+        <button type="submit">Lägg till spelare</button>
+      </form>
+
+      <h2 id="humanPlayerId"></h2>
+      <h2 id="computerPlayerId"></h2>
+
+      <p id="humanPlayerScore"></p>
+      <p id="computerPlayerScore"></p>
+
+      <!-- 3 spelknappar -->
+      <div id="playButtons">
+        <button id="playButtonRockId" class="playButton playButton__rock">
+          Sten
+        </button>
+        <button id="playButtonSissorId" class="playButton playButton__sissor">
+          Sax
+        </button>
+        <button id="playButtonPaperId" class="playButton playButton__paper">
+          Papper
+        </button>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        Skapat av Jens Christensen - GitHub Repo:
+        jenschr69/fe23-js1-mp2-jens-christensen
+      </p>
+    </footer>
+  </body>
+</html>
