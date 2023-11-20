@@ -13,7 +13,7 @@ body {
     width: 100px;
     height: 33px;
     border: 2px solid gray;
-    border-radius: 25px;
+    border-radius: 50px;
 }
 
 .playButton__rock {
