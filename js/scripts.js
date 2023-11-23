@@ -5,14 +5,15 @@ let computerPlayerChoiceNum = Math.floor( Math.random()*3 ) ;
 let computerPlayerChoice = '';
 
 if(computerPlayerChoiceNum == 1) {
-    computerPlayerChoice = 'rock';
+  computerPlayerChoice = 'rock';
 }
 else if (computerPlayerChoiceNum == 2){
-    computerPlayerChoice = 'paper';
+  computerPlayerChoice = 'paper';
 }
 else if (computerPlayerChoiceNum == 3){
-    computerPlayerChoice = 'sissor';
+  computerPlayerChoice = 'sissor';
 }
 
-console.log (computerPlayerChoice);
+console.log(computerPlayerChoiceNum);
+console.log(computerPlayerChoice);
 
