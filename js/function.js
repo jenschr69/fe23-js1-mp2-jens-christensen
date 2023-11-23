@@ -42,8 +42,3 @@ formEl.addEventListener('submit', (event)=>{
     formEl.reset();
 })
 
-function resetGame(){
-    randomNumber = Math.floor( Math.random()*101 ) ;
-    numberOfGuesses = 0;
-    // console.log(randomNumber);
-}
