@@ -14,8 +14,10 @@ body {
 }
 
 #playButtons {
-    opacity: 20%; /* When player name has not been entered yet */
+    opacity: 100%; /* When player name has not been entered yet */
+    margin-bottom: 3rem;
 }
+
 
 /* Styling play buttons */
 .playButton {
@@ -26,13 +28,14 @@ body {
 }
 
 .playButton__rock {
-    background-color: darkgrey;
-}
-
-.playButton__paper {
-    background-color: white;
+    background-color: red;
 }
 
 .playButton__sissor {
-    background-color: steelblue;
+    background-color: blue;
 }
+
+.playButton__paper {
+    background-color: green;
+}
+
