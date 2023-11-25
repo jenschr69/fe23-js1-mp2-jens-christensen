@@ -14,7 +14,7 @@ body {
 }
 
 #playButtons {
-    opacity: 100%; /* When player name has not been entered yet */
+    display: none;
     margin-bottom: 3rem;
 }
 
@@ -38,4 +38,10 @@ body {
 .playButton__paper {
     background-color: green;
 }
+
+/* This id is to be enabled when one player has won the game
+#newGame {
+    display: none;
+}
+*/
 
