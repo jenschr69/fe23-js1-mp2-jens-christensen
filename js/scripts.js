@@ -38,16 +38,20 @@ let humanPlayerChoice = '';
 
 // onClick event tar emot input från användare om vilket val spelaren har tagit - vilken av dom 
 // tre knapparne har man klickat på
-const button = document.querySelectorAll('button');
+function humanPlayerChoiceRock() {
+  document.getElementById("humanPlayerChoice").innerHTML = 'Rock';
+  humanPlayerChoice = 'rock';
+}
 
-button.addEventListener('click', (event)=>{
-  event.preventDefault();
+function humanPlayerChoiceSissor() {
+  document.getElementById("humanPlayerChoice").innerHTML = 'Sissor';
+  humanPlayerChoice = 'sissor';
+}
 
-  const text = document.querySelector('#humanPlayerChoice').value;
-  document.querySelector('#humanPlayerChoice').innerText = text;
-
-  humanPlayerChoice = text;
-})
+function humanPlayerChoicePaper() {
+    document.getElementById("humanPlayerChoice").innerHTML = 'Påse';
+    humanPlayerChoice ='paper';
+}
 
 // Efter att spelare har vunnit en runda, så kolla om spelaren har vunnit 3 gånger. Om detta
 // är tilfället, så har spelaren vunnit spelet.

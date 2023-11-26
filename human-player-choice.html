@@ -16,17 +16,30 @@
       <main>
         <!-- 3 Game Buttons - Hide until Human Players Name have been entered -->
         <div id="playButtons">
-          <button id="playButtonRockId" class="playButton playButton__rock">
-            Sten
+          <button
+            id="playButtonRockId"
+            class="playButton playButton__rock"
+            onclick="humanPlayerChoiceRock()"
+          >
+            Rock
           </button>
-          <button id="playButtonSissorId" class="playButton playButton__sissor">
-            Sax
+          <button
+            id="playButtonSissorId"
+            class="playButton playButton__sissor"
+            onclick="humanPlayerChoiceSissor()"
+          >
+            Sissor
           </button>
-          <button id="playButtonPaperId" class="playButton playButton__paper">
+          <button
+            id="playButtonPaperId"
+            class="playButton playButton__paper"
+            onclick="humanPlayerChoicePaper()"
+          >
             Påse
           </button>
         </div>
 
+        <p>Human clicked on: <span id="humanPlayerChoice"></span></p>
         <!-- Show what button that has has been clicked -->
       </main>
 
