@@ -15,9 +15,6 @@ else if (computerPlayerChoiceNum == 3){
   computerPlayerChoice = 'sissor';
 }
 
-// console.log(computerPlayerChoiceNum);
-// console.log(computerPlayerChoice);
-
 // Ta emot input från männsklig spelare
 // 1. Ta emot human player namn
 let humanPlayerName = '';
