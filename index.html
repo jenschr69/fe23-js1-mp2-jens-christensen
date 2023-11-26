@@ -19,10 +19,16 @@
           <button>Lägg till spelare</button>
         </form>
 
-        <h2 id="humanPlayerName"></h2>
-        <p id="humanPlayerScoreId">0</p>
-        <h2 id="computerPlayerId">Computer Player</h2>
-        <p id="computerPlayerScoreId">0</p>
+        <table class="scoreBoard">
+          <tr>
+            <td><h2 id="humanPlayerName"></h2></td>
+            <td><h2 id="computerPlayerId">Datorn</h2></td>
+          </tr>
+          <tr>
+            <td><p id="humanPlayerScoreId"></p></td>
+            <td><p id="computerPlayerScoreId"></p></td>
+          </tr>
+        </table>
 
         <!-- 3 Game Buttons - Hide until Human Players Name have been entered -->
         <div id="playButtons">
@@ -31,14 +37,14 @@
             class="playButton playButton__rock"
             onclick="humanPlayerChoiceRock()"
           >
-            Rock
+            Sten
           </button>
           <button
             id="playButtonSissorId"
             class="playButton playButton__sissor"
             onclick="humanPlayerChoiceSissor()"
           >
-            Sissor
+            Sax
           </button>
           <button
             id="playButtonPaperId"
@@ -48,9 +54,17 @@
             Påse
           </button>
         </div>
+        <!-- Display the round winner -->
+        <p id="computerPlayerChoice"></p>
+        <p id="humanPlayerChoice"></p>
+        <p id="roundWinner"></p>
 
         <!-- Only show this button when a player has won the entire game -->
-        <button id="newGame" class="playButton playButton__newGame">
+        <button
+          id="newGame"
+          class="playButton playButton__newGame"
+          onclick="playAgain()"
+        >
           Spela igen
         </button>
       </main>
