@@ -4,7 +4,6 @@
 let computerPlayerChoiceNum = Math.floor( ((Math.random())*3)+1 ) ;
 let computerPlayerChoice = '';
 let computerPlayerScore = 0;
-let humanPlayerScore = 0;
 
 if(computerPlayerChoiceNum == 1) {
   computerPlayerChoice = 'rock';
@@ -34,11 +33,8 @@ form.addEventListener('submit', (event)=>{
     form.reset();
 })
 
-// Deklarerar variablen humanPlayerChoice och tilldelar den ett tomt värde
-let humanPlayerChoice =''; 
-
-// Avgöra vem som har vunnit en runda
-let roundWinner = 0;
+let humanPlayerScore = 0;
+let humanPlayerChoice = ''; 
 
 // onClick event tar emot input från användare om vilket val spelaren har tagit - vilken av dom 
 // tre knapparne har man klickat på
@@ -49,40 +45,16 @@ button.addEventListener('click', (event)=>{
 
   const text = document.querySelector('#humanPlayerChoice').value;
   document.querySelector('#humanPlayerChoice').innerText = text;
+
+  humanPlayerChoice = text;
 })
-
-// Jämnföra input från dator spelar och männsklig spelare och avgöra vem som vann
-if (computerPlayerChoice === humanPlayerChoice) {
-  // Visa meddelnande: Spela igen (Gör inget)
-}
-// else if (computerPlayerChoice != humanPlayerChoice) {
-  else if (computerPlayerChoice==='rock' && humanPlayerChoice==='sissor') {
-    computerPlayerScore++;
-    roundWinner=1;
-  }
-  else if (computerPlayerChoice ='paper' && humanPlayerChoice==='rock'){
-    computerPlayerScore++;
-    roundWinner=1;
-  }
-  else if (computerPlayerChoice ='sissor' && humanPlayerChoice==='paper'){
-    computerPlayerScore++;
-    roundWinner=1;
-  }
-  else{
-    humanPlayerScore++;
-    roundWinner=1;
-  }
-// }
-
-// Når en spelare har vunnit en runda, så får denna spelaren 1 poeng
 
 // Efter att spelare har vunnit en runda, så kolla om spelaren har vunnit 3 gånger. Om detta
 // är tilfället, så har spelaren vunnit spelet.
 
 // Om en spelare har vunnit spelet, så visas vinnaren
 
-// I samband med att vinnaren av spelet visas, så visas knappen "Spela igen" och funktionen newGame utförs
-newGame();
+// I samband med att vinnaren av spelet visas, så visas knappen "Spela igen" och funktionen newGame utförs functionen newGame();
 
 function newGame(){
   let computerPlayerChoiceNum = Math.floor( ((Math.random())*3)+1 ) ;    
