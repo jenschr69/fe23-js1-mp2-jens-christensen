@@ -14,7 +14,7 @@ body {
 }
 
 #playButtons {
-    display: none;
+    /* display: none; */ 
     margin-bottom: 3rem;
 }
 
