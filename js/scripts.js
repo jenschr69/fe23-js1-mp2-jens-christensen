@@ -72,13 +72,13 @@ else{
   document.getElementById("roundWinner").innerHTML = 'Dig'; // Visa rundans vinnare
 }
 
+// After a player has won a round, check if the player has been winning 3 times - xxxxPlayerScore = 3
+// If this is the case, the winner of the game is displayed.
 
-// Efter att spelare har vunnit en runda, så kolla om spelaren har vunnit 3 gånger. Om detta
-// är tilfället, så har spelaren vunnit spelet.
-
-// Om en spelare har vunnit spelet, så visas vinnaren
-
-// I samband med att vinnaren av spelet visas, så visas knappen "Spela igen" och funktionen playAgain utför - playAgain();
+// I samband med att vinnaren av spelet visas, så visas knappen "Spela igen" och funktionen playAgain 
+// utför - playAgain();
+// In connection to that the winner of the game is displayed, the button "Spela igen" should be
+// displayed. When clicking on this button the function playAgain() should be executed. 
 
 function displayPlayerScore() {
   document.getElementById("computerPlayerScoreId").innerHTML = computerPlayerScore;
