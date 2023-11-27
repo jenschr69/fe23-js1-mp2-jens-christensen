@@ -5,7 +5,7 @@
 let computerPlayerName = 'Datorn';
 let computerPlayerChoiceNum = Math.floor( ((Math.random())*3)+1 ) ;
 let computerPlayerChoice = '';
-let computerPlayerScore = '';
+let computerPlayerScore = 0;
 
 if(computerPlayerChoiceNum == 1) {
   computerPlayerChoice = 'rock';
@@ -31,7 +31,9 @@ form.addEventListener('submit', (event)=>{
     form.reset();
 })
 
-let humanPlayerScore = '';
+let humanPlayerScore = 0;
+displayScoreBoard();
+
 let humanPlayerChoice = ''; 
 
 // Send score data to the screen before any rounds have been played
@@ -75,12 +77,16 @@ else{
 // After a player has won a round, check if the player has been winning 3 times - xxxxPlayerScore = 3
 // If this is the case, the winner of the game is displayed.
 
-// I samband med att vinnaren av spelet visas, så visas knappen "Spela igen" och funktionen playAgain 
-// utför - playAgain();
 // In connection to that the winner of the game is displayed, the button "Spela igen" should be
 // displayed. When clicking on this button the function playAgain() should be executed. 
 
-function displayPlayerScore() {
+
+
+function displayScoreBoard() {
+  // Displaying player names to scoreboard
+  document.getElementById("computerPlayerName").innerHTML = computerPlayerName;
+  document.getElementById("humanPlayerName").innerHTML = humanPlayerName;  
+  // Displaying scores to scoreboard
   document.getElementById("computerPlayerScoreId").innerHTML = computerPlayerScore;
   document.getElementById("humanPlayerScoreId").innerHTML = humanPlayerScore;  
 }
