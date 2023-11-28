@@ -1,5 +1,4 @@
 // Test code display scoreboard
-
 let computerPlayerName = 'Datorn';
 let computerPlayerScore = '1';
 
