@@ -46,11 +46,11 @@ function computerPlayersPlay() {
 
 // Display Scoreboard - Change visibility to "display: block;" when human player name has been submitted
 // Class
-function displayScoreBoard {
+function displayScoreBoard() {
   // Add display: block; to class scoreBoardVisibility
 }
 
-function displayNewGameButton {
+function displayNewGameButton() {
   /* This id is to be enabled when one player has won the game
 #newGameButton { display: block; }*/
 }
