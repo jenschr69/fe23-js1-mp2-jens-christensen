@@ -17,13 +17,18 @@ body {
     width: 400px;
 }
 
+.scoreBoardVisibility {
+    display: none;
+}
+
 #playButtons {
-    /* display: none; */ 
+    /* display: none; */
     margin-bottom: 3rem;
 }
 
 
 /* Styling play buttons */
+/* TODO: Add Font Awesome icons to supplement colors */
 .playButton {
     width: 150px;
     height: 33px;
@@ -43,9 +48,6 @@ body {
     background-color: green;
 }
 
-/* This id is to be enabled when one player has won the game
-#newGame {
+#newGameButton {
     display: none;
 }
-*/
-

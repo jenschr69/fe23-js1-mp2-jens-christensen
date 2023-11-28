@@ -1,98 +1,56 @@
-// When the player has entered the name and clicked on the buttan "Lägg till spelare",
-// the input field for the name, should be hidden, and the name of the human player, score 
+// When the player has entered the name and clicked on the button "Lägg till spelare",
+// the input field for the name, should be hidden, and the scoreboard, score 
 // and play buttons should be displayed.
-
-let computerPlayerName = 'Datorn';
-let computerPlayerChoiceNum = Math.floor( ((Math.random())*3)+1 ) ;
-let computerPlayerChoice = '';
-let computerPlayerScore = 0;
-
-if(computerPlayerChoiceNum == 1) {
-  computerPlayerChoice = 'rock';
-}
-else if (computerPlayerChoiceNum == 2){
-  computerPlayerChoice = 'paper';
-}
-else if (computerPlayerChoiceNum == 3){
-  computerPlayerChoice = 'sissor';
-}
 
 // Receive input from human player - Human player enters name
 let humanPlayerName = '';
+let humanPlayerScore = 0;
 
 const form = document.querySelector('form');
 
-form.addEventListener('submit', (event)=>{
-    event.preventDefault();
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
 
-    const text = document.querySelector('#humanPlayerId').value;
-    document.querySelector('#humanPlayerName').innerText = text;
-
-    form.reset();
+  const text = document.querySelector('#humanPlayerId').value;
+  document.querySelector('#humanPlayerName').innerText = text;
+  humanPlayerName = text;
+  form.reset();
+  displayScoreBoard();
 })
 
-let humanPlayerScore = 0;
-displayScoreBoard();
+let computerPlayerName = 'Datorn';
+let computerPlayerScore = 0;
+let computerPlayerChoice = '';
 
-let humanPlayerChoice = ''; 
+computerPlayersPlay();
 
-// Send score data to the screen before any rounds have been played
+humanPlayersPlay();
 
-displayPlayerScore();
+// If Computer Players Score are less than 3 and Human Players Score are less the 3 > Continue playing
 
-// onClick event receives input from the human user to register human users choice from three buttons
-function humanPlayerChoiceRock() {
-  document.getElementById("humanPlayerChoice").innerHTML = 'Sten';
-  humanPlayerChoice = 'rock';
-}
+// Functions used for the game
+// Randomizing Computers Play - Adding it as a string value to Computer Players Choice variable
+function computerPlayersPlay() {
+  let computerPlayerChoiceNum = Math.floor(((Math.random()) * 3) + 1);
 
-function humanPlayerChoiceSissor() {
-  document.getElementById("humanPlayerChoice").innerHTML = 'Sax';
-  humanPlayerChoice = 'sissor';
-}
-
-function humanPlayerChoicePaper() {
-    document.getElementById("humanPlayerChoice").innerHTML = 'Påse';
-    humanPlayerChoice ='paper';
-}
-
-// Check who has won
-if (computerPlayerChoice === humanPlayerChoice) {
-  displayPlayerScore();
-  document.getElementById("roundWinner").innerHTML = 'Dator valde samma som människan. Spela igen!';
+  if (computerPlayerChoiceNum == 1) {
+    computerPlayerChoice = 'rock';
   }
-else if ( (computerPlayerChoice==='rock' && humanPlayerChoice==='sissor') || 
-          (computerPlayerChoice ='paper' && humanPlayerChoice==='rock') || 
-          (computerPlayerChoice ='sissor' && humanPlayerChoice==='paper') ) {
-  computerPlayerScore++;
-  displayPlayerScore();
-  document.getElementById("roundWinner").innerHTML = 'Datorn'; // Visa rundans vinnare
-}
-else{
-  humanPlayerScore++;
-  displayPlayerScore();
-  document.getElementById("roundWinner").innerHTML = 'Dig'; // Visa rundans vinnare
+  else if (computerPlayerChoiceNum == 2) {
+    computerPlayerChoice = 'paper';
+  }
+  else if (computerPlayerChoiceNum == 3) {
+    computerPlayerChoice = 'sissor';
+  }
 }
 
-// After a player has won a round, check if the player has been winning 3 times - xxxxPlayerScore = 3
-// If this is the case, the winner of the game is displayed.
-
-// In connection to that the winner of the game is displayed, the button "Spela igen" should be
-// displayed. When clicking on this button the function playAgain() should be executed. 
-
-
-
-function displayScoreBoard() {
-  // Displaying player names to scoreboard
-  document.getElementById("computerPlayerName").innerHTML = computerPlayerName;
-  document.getElementById("humanPlayerName").innerHTML = humanPlayerName;  
-  // Displaying scores to scoreboard
-  document.getElementById("computerPlayerScoreId").innerHTML = computerPlayerScore;
-  document.getElementById("humanPlayerScoreId").innerHTML = humanPlayerScore;  
+// Display Scoreboard - Change visibility to "display: block;" when human player name has been submitted
+// Class
+function displayScoreBoard {
+  // Add display: block; to class scoreBoardVisibility
 }
 
-function playAgain(){
-  let computerPlayerChoiceNum = Math.floor( ((Math.random())*3)+1 ) ;    
-  let computerPlayerScore = 0;
-  let humanPlayerScore = 0;
+function displayNewGameButton {
+  /* This id is to be enabled when one player has won the game
+#newGameButton { display: block; }*/
 }

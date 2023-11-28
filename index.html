@@ -14,12 +14,13 @@
       </header>
 
       <main>
-        <form>
+        <form id="enterComputerPlayerNameId">
           <input type="text" placeholder="Spelarnamn" id="humanPlayerId" />
           <button>Lägg till spelare</button>
         </form>
 
-        <table class="scoreBoard">
+        <!-- Display score board when human player name has been entered -->
+        <table class="scoreBoard scoreBoardVisibility">
           <tr>
             <td><h2 id="humanPlayerName"></h2></td>
             <td><h2 id="computerPlayerId">Datorn</h2></td>
@@ -30,44 +31,6 @@
           </tr>
         </table>
 
-        <!-- 3 Game Buttons - Hide until Human Players Name have been entered -->
-        <!-- PROBLEM: Using inline elements to activate click on buttons. Should be some kind of event listener in js file identifying click and buttons value -->
-        <div id="playButtons">
-          <button
-            id="playButtonRockId"
-            class="playButton playButton__rock"
-            onclick="humanPlayerChoiceRock()"
-          >
-            Sten
-          </button>
-          <button
-            id="playButtonSissorId"
-            class="playButton playButton__sissor"
-            onclick="humanPlayerChoiceSissor()"
-          >
-            Sax
-          </button>
-          <button
-            id="playButtonPaperId"
-            class="playButton playButton__paper"
-            onclick="humanPlayerChoicePaper()"
-          >
-            Påse
-          </button>
-        </div>
-        <!-- Display the round winner -->
-        <p id="computerPlayerChoice"></p>
-        <p id="humanPlayerChoice"></p>
-        <p id="roundWinner"></p>
-
-        <!-- Only show this button when a player has won the entire game -->
-        <button
-          id="newGame"
-          class="playButton playButton__newGame"
-          onclick="playAgain()"
-        >
-          Spela igen
-        </button>
       </main>
 
       <footer>

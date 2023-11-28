@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sten, sax och papper</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Sten, sax och påse</h1>
+      </header>
+
+      <main>
+        <form>
+          <input type="text" placeholder="Spelarnamn" id="humanPlayerId" />
+          <button>Lägg till spelare</button>
+        </form>
+
+        <table class="scoreBoard">
+          <tr>
+            <td><h2 id="humanPlayerName"></h2></td>
+            <td><h2 id="computerPlayerId">Datorn</h2></td>
+          </tr>
+          <tr>
+            <td><p id="humanPlayerScoreId"></p></td>
+            <td><p id="computerPlayerScoreId"></p></td>
+          </tr>
+        </table>
+
+        <!-- 3 Game Buttons - Hide until Human Players Name have been entered -->
+        <!-- PROBLEM: Using inline elements to activate click on buttons. Should be some kind of event listener in js file identifying click and buttons value -->
+        <div id="playButtons">
+          <button
+            id="playButtonRockId"
+            class="playButton playButton__rock"
+            onclick="humanPlayerChoiceRock()"
+          >
+            Sten
+          </button>
+          <button
+            id="playButtonSissorId"
+            class="playButton playButton__sissor"
+            onclick="humanPlayerChoiceSissor()"
+          >
+            Sax
+          </button>
+          <button
+            id="playButtonPaperId"
+            class="playButton playButton__paper"
+            onclick="humanPlayerChoicePaper()"
+          >
+            Påse
+          </button>
+        </div>
+        <!-- Display the round winner -->
+        <p id="computerPlayerChoice"></p>
+        <p id="humanPlayerChoice"></p>
+        <p id="roundWinner"></p>
+
+        <!-- Only show this button when a player has won the entire game -->
+        <button
+          id="newGame"
+          class="playButton playButton__newGame"
+          onclick="playAgain()"
+        >
+          Spela igen
+        </button>
+      </main>
+
+      <footer>
+        <p>
+          Skapat av Jens Christensen - GitHub Repo:
+          jenschr69/fe23-js1-mp2-jens-christensen
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
