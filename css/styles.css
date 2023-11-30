@@ -13,15 +13,15 @@ body {
     margin: auto;
 }
 
-.scoreBoard {
+.score-board {
     width: 400px;
 }
 
-.scoreBoardVisibility {
+.score-board-visibility {
     display: none;
 }
 
-#playButtons {
+#play-buttons {
     /* display: none; */
     margin-bottom: 3rem;
 }
@@ -29,25 +29,25 @@ body {
 
 /* Styling play buttons */
 /* TODO: Add Font Awesome icons to supplement colors */
-.playButton {
+.play-button {
     width: 150px;
     height: 33px;
     border: 2px solid gray;
     border-radius: 50px;
 }
 
-.playButton__rock {
+.play-button__rock {
     background-color: red;
 }
 
-.playButton__sissor {
+.play-button__sissor {
     background-color: blue;
 }
 
-.playButton__paper {
+.play-button__paper {
     background-color: green;
 }
 
-#newGameButton {
+#new-game-button {
     display: none;
 }

@@ -11,8 +11,8 @@ const form = document.querySelector('form');
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const text = document.querySelector('#humanPlayerId').value;
-  document.querySelector('#humanPlayerName').innerText = text;
+  const text = document.querySelector('#human-player-id').value;
+  document.querySelector('#human-player-name').innerText = text;
   humanPlayerName = text;
   form.reset();
   displayScoreBoard();
