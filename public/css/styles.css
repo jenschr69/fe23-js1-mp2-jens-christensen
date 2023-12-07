@@ -13,11 +13,15 @@ body {
     margin: auto;
 }
 
+.input-human-player-form-hide{
+    display: none;
+}
+
 .score-board {
     width: 400px;
 }
 
-.score-board-visibility {
+.score-board-visibility-none {
     display: none;
 }
 

@@ -8,23 +8,29 @@ let humanPlayerScore = 0;
 
 const form = document.querySelector('form');
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
+form.addEventListener('submit', (event)=>{
+    event.preventDefault();
 
-  const text = document.querySelector('#human-player-id').value;
-  document.querySelector('#human-player-name').innerText = text;
-  humanPlayerName = text;
-  form.reset();
-  displayScoreBoard();
+    const text = document.querySelector('#human-player-id').value;
+    document.querySelector('#human-player-name').innerText = text;
+
+    form.reset();
+    // Hide human-input-name form
+    hideHumanPlayerNameForm();
+    displayScoreBoard();
 })
 
-let computerPlayerName = 'Datorn';
+
 let computerPlayerScore = 0;
 let computerPlayerChoice = '';
 
-computerPlayersPlay();
+// displayComputerPlayerName();
 
-humanPlayersPlay();
+displayScoreBoard();
+
+// computerPlayersPlay();
+
+// humanPlayersPlay();
 
 // If Computer Players Score are less than 3 and Human Players Score are less the 3 > Continue playing
 
@@ -44,10 +50,25 @@ function computerPlayersPlay() {
   }
 }
 
-// Display Scoreboard - Change visibility to "display: block;" when human player name has been submitted
-// Class
+// Hide input field for entering human player name when name has been entered
+function hideHumanPlayerNameForm()  {
+  document.getElementById("input-form-human-name").classList.add("input-human-player-form-hide");
+}
+
+// Display Human Player Name
+function displayHumanPlayerName () {
+  document.getElementById("human-player-name").innerText = (humanPlayerName);
+}
+
+function displayComputerPlayerName () {
+  let computerPlayerName = 'Datorn';
+  document.getElementById("computer-player-name").innerText = (computerPlayerName);
+}
+
+// Display ScoreBoard by removing the class "score-board-visibility-none"
 function displayScoreBoard() {
-  // Add display: block; to class scoreBoardVisibility
+  document.getElementById("score-board-id").classList.remove("score-board-visiblity-none");
+  displayComputerPlayerName ();
 }
 
 function displayNewGameButton() {
