@@ -27,7 +27,7 @@ while (computerPlayerScore < 3 || humanPlayerScore < 3) {
   displayScoreBoard();
   computerPlayersPlay();
   humanPlayersPlay();
-  displayRoundWinner();
+  // displayRoundWinner();
 }
 
 
@@ -63,15 +63,13 @@ function computerPlayersPlay() {
   }
 }
 
-// Determin human players play
+// Determine human players play
 function humanPlayersPlay {
-  humanPlayerChoiceRock();
-  humanPlayerChoiceSissor();
-  humanPlayerChoicePaper();
-  TODO: Return human players choice
+  document.getElementById("play-button-rock-id").addEventListener("click", humanPlayerChoiceRock);
+  document.getElementById("play-button-sissor-id").addEventListener("click", humanPlayerChoiceSissor);
+  document.getElementById("play-button-paper-id").addEventListener("click", humanPlayerChoicePaper);
 }
 
-// TODO: This code needs to be modified with eventlistener
 function humanPlayerChoiceRock() {
   document.getElementById("humanPlayerChoice").innerHTML = 'Sten';
   humanPlayerChoice = 'rock';

@@ -1,12 +1,9 @@
-// Registrera vilken knapp spelaren har klickat på
-
-// Ta emot input från männsklig spelare
-// 1. Ta emot human player namn
+// Receive input from human player
 
 let humanPlayerChoice = ''; 
 
-// onClick event tar emot input från användare om vilket val spelaren har tagit - vilken av dom 
-// tre knapparne har man klickat på
+// addEventListener receives the input from the human player regarding human players choice
+// which of the three buttons that has been clicked
 
 document.getElementById("play-button-rock-id").addEventListener("click", humanPlayerChoiceRock);
 document.getElementById("play-button-sissor-id").addEventListener("click", humanPlayerChoiceSissor);
@@ -26,6 +23,3 @@ function humanPlayerChoicePaper() {
     document.getElementById("human-player-choice").innerHTML = 'Påse';
     humanPlayerChoice ='paper';
 }
-
-
-// Visa på skärmen vilken knapp spelaren har klickat på
