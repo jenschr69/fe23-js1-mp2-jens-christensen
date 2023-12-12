@@ -23,15 +23,12 @@ form.addEventListener('submit', (event) => {
 let computerPlayerScore = 0;
 let computerPlayerChoice = '';
 
-displayScoreBoard();
-
-// computerPlayersPlay();
-
-// humanPlayersPlay();
-
-// If Computer Players Score are less than 3 and Human Players Score are less the 3 > Continue playing
-
-
+while (computerPlayerScore < 3 || humanPlayerScore < 3) {
+  displayScoreBoard();
+  computerPlayersPlay();
+  humanPlayersPlay();
+  displayRoundWinner();
+}
 
 
 // Functions used for the game
@@ -41,34 +38,15 @@ function hideHumanPlayerNameForm() {
   document.getElementById("input-form-human-name").classList.add("input-human-player-form-hide");
 }
 
-// Display Human Player Name
-function displayHumanPlayerName() {
-  document.getElementById("human-player-name").innerText = (humanPlayerName);
-}
-
-function displayHumanPlayerScore() {
-  document.getElementById("human-player-score-id").innerText = (humanPlayerScore);
-}
-
-function displayComputerPlayerName() {
-  let computerPlayerName = 'Datorn';
-  document.getElementById("computer-player-name").innerText = (computerPlayerName);
-}
-
-function displayComputerPlayerScore() {
-  document.getElementById("computer-player-score-id").innerText = (computerPlayerScore);
-}
-
 // Display ScoreBoard by removing the class "score-board-visibility-none"
 function displayScoreBoard() {
   document.getElementById("score-board-id").classList.remove("score-board-visiblity-none");
-  hideHumanPlayerNameForm();
-  displayHumanPlayerName();
-  displayHumanPlayerScore();
-  displayComputerPlayerName();
-  displayComputerPlayerScore();
+  document.getElementById("human-player-name").innerText = (humanPlayerName);
+  document.getElementById("human-player-score-id").innerText = (humanPlayerScore);
+  let computerPlayerName = 'Datorn';
+  document.getElementById("computer-player-name").innerText = (computerPlayerName);
+  document.getElementById("computer-player-score-id").innerText = (computerPlayerScore);
 }
-
 
 // Randomizing Computers Play - Adding it as a string value to Computer Players Choice variable
 function computerPlayersPlay() {
@@ -83,6 +61,30 @@ function computerPlayersPlay() {
   else if (computerPlayerChoiceNum == 3) {
     computerPlayerChoice = 'sissor';
   }
+}
+
+// Determin human players play
+function humanPlayersPlay {
+  humanPlayerChoiceRock();
+  humanPlayerChoiceSissor();
+  humanPlayerChoicePaper();
+  TODO: Return human players choice
+}
+
+// TODO: This code needs to be modified with eventlistener
+function humanPlayerChoiceRock() {
+  document.getElementById("humanPlayerChoice").innerHTML = 'Sten';
+  humanPlayerChoice = 'rock';
+}
+
+function humanPlayerChoiceSissor() {
+  document.getElementById("humanPlayerChoice").innerHTML = 'Sax';
+  humanPlayerChoice = 'sissor';
+}
+
+function humanPlayerChoicePaper() {
+    document.getElementById("humanPlayerChoice").innerHTML = 'Påse';
+    humanPlayerChoice ='paper';
 }
 
 function displayNewGameButton() {
