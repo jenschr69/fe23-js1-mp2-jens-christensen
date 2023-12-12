@@ -19,14 +19,17 @@ body {
 
 .score-board {
     width: 400px;
-}
-
-.score-board-visibility-none {
     display: none;
 }
 
+/*
+.score-board-visibility-none {
+    display: none;
+}
+*/
+
 #play-buttons {
-    /* display: none; */
+    display: none;
     margin-bottom: 3rem;
 }
 
@@ -52,6 +55,6 @@ body {
     background-color: green;
 }
 
-#new-game-button {
+#button-new-round, #button-new-game {
     display: none;
 }

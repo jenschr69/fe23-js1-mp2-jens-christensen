@@ -3,6 +3,7 @@
 // and play buttons should be displayed.
 
 // Receive input from human player - Human player enters name
+humanPlayersPlay();
 let humanPlayerName = '';
 let humanPlayerScore = 0;
 
@@ -23,12 +24,14 @@ form.addEventListener('submit', (event) => {
 let computerPlayerScore = 0;
 let computerPlayerChoice = '';
 
-while (computerPlayerScore < 3 || humanPlayerScore < 3) {
+// While-loopen behævs inte eftersom allting måste hønda stegvis från det att anvøndaren har klickat på en knapp. 
+// Påminnelse: Ta ett litet steg i taget, se till att det fungerar innan du går till nøsta
+// while (computerPlayerScore < 3 || humanPlayerScore < 3) {
   displayScoreBoard();
-  computerPlayersPlay();
-  humanPlayersPlay();
+  // computerPlayersPlay();
+  // humanPlayersPlay();
   // displayRoundWinner();
-}
+
 
 
 // Functions used for the game
@@ -64,7 +67,7 @@ function computerPlayersPlay() {
 }
 
 // Determine human players play
-function humanPlayersPlay {
+function humanPlayersPlay() {
   document.getElementById("play-button-rock-id").addEventListener("click", humanPlayerChoiceRock);
   document.getElementById("play-button-sissor-id").addEventListener("click", humanPlayerChoiceSissor);
   document.getElementById("play-button-paper-id").addEventListener("click", humanPlayerChoicePaper);
@@ -73,16 +76,34 @@ function humanPlayersPlay {
 function humanPlayerChoiceRock() {
   document.getElementById("humanPlayerChoice").innerHTML = 'Sten';
   humanPlayerChoice = 'rock';
+  const compChoice = getComputerChoice();
+  // jømfæra valen compareChoices();
+  // tilldela poæng
+  // ør poøngen mer øn tre
+    // fortsøtta
+    // starta om
 }
 
 function humanPlayerChoiceSissor() {
   document.getElementById("humanPlayerChoice").innerHTML = 'Sax';
   humanPlayerChoice = 'sissor';
+  const compChoice = getComputerChoice();
+  // jømfæra valen
+  // tilldela poæng
+  // ør poøngen mer øn tre
+    // fortsøtta
+    // starta om
 }
 
 function humanPlayerChoicePaper() {
     document.getElementById("humanPlayerChoice").innerHTML = 'Påse';
     humanPlayerChoice ='paper';
+    const compChoice = getComputerChoice();
+      // jømfæra valen
+  // tilldela poæng
+  // ør poøngen mer øn tre
+    // fortsøtta
+    // starta om
 }
 
 function displayNewGameButton() {
@@ -99,3 +120,14 @@ function newGame() {
 function resetGame() {
 
 }
+
+function getComputerChoice(){
+  return 'rock';
+}
+
+// let a = 0;
+// while(a<3){
+//   console.log(a);
+//   a++;
+// }
+// console.log('testar')
