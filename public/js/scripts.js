@@ -20,19 +20,14 @@ form.addEventListener('submit', (event) => {
   hideHumanPlayerNameForm();
 })
 
-
+let computerPlayerName = 'Datorn';
 let computerPlayerScore = 0;
-let computerPlayerChoice = '';
 
-// While-loopen behævs inte eftersom allting måste hønda stegvis från det att anvøndaren har klickat på en knapp. 
-// Påminnelse: Ta ett litet steg i taget, se till att det fungerar innan du går till nøsta
-// while (computerPlayerScore < 3 || humanPlayerScore < 3) {
-  displayScoreBoard();
+displayScoreBoard();
   // computerPlayersPlay();
-  // humanPlayersPlay();
   // displayRoundWinner();
 
-
+let computerPlayerChoice = '';
 
 // Functions used for the game
 
@@ -51,83 +46,3 @@ function displayScoreBoard() {
   document.getElementById("computer-player-score-id").innerText = (computerPlayerScore);
 }
 
-// Randomizing Computers Play - Adding it as a string value to Computer Players Choice variable
-function computerPlayersPlay() {
-  let computerPlayerChoiceNum = Math.floor(((Math.random()) * 3) + 1);
-
-  if (computerPlayerChoiceNum == 1) {
-    computerPlayerChoice = 'rock';
-  }
-  else if (computerPlayerChoiceNum == 2) {
-    computerPlayerChoice = 'paper';
-  }
-  else if (computerPlayerChoiceNum == 3) {
-    computerPlayerChoice = 'sissor';
-  }
-}
-
-// Determine human players play
-function humanPlayersPlay() {
-  document.getElementById("play-button-rock-id").addEventListener("click", humanPlayerChoiceRock);
-  document.getElementById("play-button-sissor-id").addEventListener("click", humanPlayerChoiceSissor);
-  document.getElementById("play-button-paper-id").addEventListener("click", humanPlayerChoicePaper);
-}
-
-function humanPlayerChoiceRock() {
-  document.getElementById("humanPlayerChoice").innerHTML = 'Sten';
-  humanPlayerChoice = 'rock';
-  const compChoice = getComputerChoice();
-  // jømfæra valen compareChoices();
-  // tilldela poæng
-  // ør poøngen mer øn tre
-    // fortsøtta
-    // starta om
-}
-
-function humanPlayerChoiceSissor() {
-  document.getElementById("humanPlayerChoice").innerHTML = 'Sax';
-  humanPlayerChoice = 'sissor';
-  const compChoice = getComputerChoice();
-  // jømfæra valen
-  // tilldela poæng
-  // ør poøngen mer øn tre
-    // fortsøtta
-    // starta om
-}
-
-function humanPlayerChoicePaper() {
-    document.getElementById("humanPlayerChoice").innerHTML = 'Påse';
-    humanPlayerChoice ='paper';
-    const compChoice = getComputerChoice();
-      // jømfæra valen
-  // tilldela poæng
-  // ør poøngen mer øn tre
-    // fortsøtta
-    // starta om
-}
-
-function displayNewGameButton() {
-  /* This id is to be enabled when one player has won the game
-#newGameButton { display: block; }*/
-}
-
-// Choice to select when the same player wants to play again - keeping existing humanPlayerName
-function newGame() {
-
-}
-
-// Choice to select when a new player wants to play - erasing the value of the humanPlayerName variable
-function resetGame() {
-
-}
-
-function getComputerChoice(){
-  return 'rock';
-}
-
-// let a = 0;
-// while(a<3){
-//   console.log(a);
-//   a++;
-// }
-// console.log('testar')

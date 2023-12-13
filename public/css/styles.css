@@ -22,39 +22,11 @@ body {
     display: none;
 }
 
-/*
 .score-board-visibility-none {
     display: none;
 }
-*/
 
 #play-buttons {
     display: none;
     margin-bottom: 3rem;
-}
-
-
-/* Styling play buttons */
-/* TODO: Add Font Awesome icons to supplement colors */
-.play-button {
-    width: 150px;
-    height: 33px;
-    border: 2px solid gray;
-    border-radius: 50px;
-}
-
-.play-button__rock {
-    background-color: red;
-}
-
-.play-button__sissor {
-    background-color: blue;
-}
-
-.play-button__paper {
-    background-color: green;
-}
-
-#button-new-round, #button-new-game {
-    display: none;
 }
