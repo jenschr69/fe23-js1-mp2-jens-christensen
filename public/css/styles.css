@@ -13,20 +13,18 @@ body {
     margin: auto;
 }
 
-.input-human-player-form-hide{
+.input-form-human-player-name-hide {
     display: none;
 }
 
 .score-board {
     width: 400px;
+}
+
+.score-board-visibility-hide {
     display: none;
 }
 
-.score-board-visibility-none {
-    display: none;
-}
-
-#play-buttons {
-    display: none;
-    margin-bottom: 3rem;
+.play-buttons {
+    
 }

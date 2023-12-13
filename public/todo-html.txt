@@ -1,15 +1,4 @@
-        <!-- 3 Game Buttons - Hide until Human Players Name have been entered -->
-        <!-- When human players input has been received, hide choices -->
-        <div id="play-buttons">
-          <!-- Human player choice = rock -->
-          <button id="play-button-rock-id">Sten</button>
 
-          <!-- Human player choice = sissor -->
-          <button id="play-button-sissor-id">Sax</button>
-
-          <!-- Human player choice = paper -->
-          <button id="play-button-paper-id">Påse</button>
-        </div>
 
         <!-- Display the round winner when a round has been played -->
         <!-- Reset / empty when the button new round has been pushed -->
