@@ -56,23 +56,7 @@ function humanPlayerChoicePaper() {
     humanPlayerChoice ='paper';
 }
 
-// Check who has won
-if (computerPlayerChoice === humanPlayerChoice) {
-  displayPlayerScore();
-  document.getElementById("roundWinner").innerHTML = 'Dator valde samma som människan. Spela igen!';
-  }
-else if ( (computerPlayerChoice==='rock' && humanPlayerChoice==='sissor') || 
-          (computerPlayerChoice ='paper' && humanPlayerChoice==='rock') || 
-          (computerPlayerChoice ='sissor' && humanPlayerChoice==='paper') ) {
-  computerPlayerScore++;
-  displayPlayerScore();
-  document.getElementById("roundWinner").innerHTML = 'Datorn'; // Visa rundans vinnare
-}
-else{
-  humanPlayerScore++;
-  displayPlayerScore();
-  document.getElementById("roundWinner").innerHTML = 'Dig'; // Visa rundans vinnare
-}
+
 
 // After a player has won a round, check if the player has been winning 3 times - xxxxPlayerScore = 3
 // If this is the case, the winner of the game is displayed.

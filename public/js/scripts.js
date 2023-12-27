@@ -40,6 +40,14 @@ function displayScoreBoard() {
   document.getElementById("computer-player-score-id").innerText = (computerPlayerScore);
 }
 
+function upDateScoreBoard() {
+  document.getElementById("human-player-name").innerText = humanPlayerName;
+  document.getElementById("human-player-score-id").innerText = (humanPlayerScore);
+  let computerPlayerName = 'Datorn';
+  document.getElementById("computer-player-name").innerText = (computerPlayerName);
+  document.getElementById("computer-player-score-id").innerText = (computerPlayerScore);
+}
+
 // Display Game Buttons
 // Determine human players play
 function humanPlayersPlay() {
@@ -52,33 +60,22 @@ function humanPlayerChoiceRock() {
   document.getElementById("humanPlayerChoice").innerHTML = 'Sten';
   humanPlayerChoice = 'rock';
   const compChoice = getComputerPlayersChoice();
-  // jømfæra valen compareChoices();
-  // tilldela poæng
-  // ør poøngen mer øn tre
-  // fortsøtta
-  // starta om
 }
 
 function humanPlayerChoiceSissor() {
   document.getElementById("humanPlayerChoice").innerHTML = 'Sax';
   humanPlayerChoice = 'sissor';
   const compChoice = getComputerPlayersChoice();
-  // jømfæra valen
-  // tilldela poæng
-  // ør poøngen mer øn tre
-  // fortsøtta
-  // starta om
 }
 
 function humanPlayerChoicePaper() {
   document.getElementById("humanPlayerChoice").innerHTML = 'Påse';
   humanPlayerChoice ='paper';
-  const compChoice = getComputerPlayersChoice();
-  // jømfæra valen
-  // tilldela poæng
-  // ør poøngen mer øn tre
-  // fortsøtta
-  // starta om
+  const compPlayerChoice = getComputerPlayersChoice();
+  const roundWinner = determineRoundWinner();
+  // Is score three, then the round winner is found. If not continue playing
+  // Continue playing
+  // Start new game
 }
 
 // Randomizing Computers Choice - Adding it as a string value to Computer Players Choice variable
@@ -93,6 +90,35 @@ function getComputerPlayersChoice() {
   }
   else if (computerPlayerChoiceNum == 3) {
     computerPlayerChoice = 'sissor';
+  }
+}
+
+// Check who has won and give the winner one point 
+function determineRoundWinner () {
+if (computerPlayersChoice === humanPlayersChoice) {
+  displayPlayerScore();
+  document.getElementById("round-winner").innerHTML = 'Dator valde samma som människan. Spela igen!';
+  }
+else if ( (computerPlayerChoice==='rock' && humanPlayerChoice==='sissor') || 
+          (computerPlayerChoice ='paper' && humanPlayerChoice==='rock') || 
+          (computerPlayerChoice ='sissor' && humanPlayerChoice==='paper') ) {
+  computerPlayerScore++;
+  displayPlayerScore();
+  document.getElementById("round-winner").innerHTML = 'Datorn'; // Visa rundans vinnare
+}
+else{
+  humanPlayerScore++;
+  displayPlayerScore();
+  document.getElementById("round-winner").innerHTML = '$humanPlayerName'; // Visa rundans vinnare
+}
+}
+
+function gameWinnerFound () {
+  if (computerPlayerScore == 3) {
+    gameWinner = 'Computer';
+  }
+  else if (humanPlayerScore == 3) {
+    gameWinner = '$humanPlayerName';
   }
 }
 
