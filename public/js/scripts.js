@@ -1,0 +1,1 @@
+// Scripts for sten, sax och påse
