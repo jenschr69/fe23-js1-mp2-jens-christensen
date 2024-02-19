@@ -7,3 +7,13 @@
 
  Spelet startas med att denn männskliga spelaren skriver in sitt namn genom ett fält,
  och klickar på "Lägg till spelare".
+
+ Där spelas till en av spelarna har fått X poeng.
+
+ Männskliga spelaren börjar med att välja sitt spel.
+
+ Når männskliga spelaren har vald sitt spel, genereras datorns spel.
+
+ Om båda har vald samma spel, så genereras ett nytt spel för dator spelaren inntil dator spelaren
+ och männskliga spelaren har tagit oliga spel (val).
+ 
