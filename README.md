@@ -16,4 +16,7 @@
 
  Om båda har vald samma spel, så genereras ett nytt spel för dator spelaren inntil dator spelaren
  och männskliga spelaren har tagit oliga spel (val).
+
+ GitHub Repo: https://github.com/jenschr69/fe23-js1-mp2-jens-christensen
+ GitHub Pages: 
  
