@@ -2,3 +2,9 @@ Font Awesome Embedded link
 <script src="https://kit.fontawesome.com/c9317ebbd4.js" crossorigin="anonymous"></script>
 !-- Place in head-tag
 
+Dark mode - bootstrap:
+https://getbootstrap.com/docs/5.3/customize/color-modes/
+
+Lägga till sticky bottom class med Bootstrap? Läsa på
+sticky-bottom
+
