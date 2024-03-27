@@ -1,0 +1,4 @@
+Font Awesome Embedded link
+<script src="https://kit.fontawesome.com/c9317ebbd4.js" crossorigin="anonymous"></script>
+!-- Place in head-tag
+
