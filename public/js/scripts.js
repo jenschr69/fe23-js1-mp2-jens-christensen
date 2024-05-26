@@ -1,5 +1,6 @@
 // Receive human players name
-// https://www.w3schools.com/js/tryit.asp?filename=tryjs_form_submit
+let humanPlayerName = document.getElementById('humanplayername');
+console.log('humanPlayerName');
 
 // Register click on form button with eventlistener
 // https://www.w3schools.com/js/tryit.asp?filename=tryjs_addeventlistener_displaydate

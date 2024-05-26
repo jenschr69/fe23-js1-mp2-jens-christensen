@@ -10,6 +10,14 @@ main {
   color: white;
 }
 
+.choices {
+  display: flex;
+}
+
+.choices>div {
+  padding-right: 5em;
+}
+
 footer {
   color: white;
 }
