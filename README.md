@@ -19,4 +19,8 @@
 
  GitHub Repo: https://github.com/jenschr69/fe23-js1-mp2-jens-christensen
  GitHub Pages: 
+
+ Ressurser användt i spelet:
+ Rock Paper Scissor Game: https://www.rpsgame.org/ 
+ Font Awesome: 
  
