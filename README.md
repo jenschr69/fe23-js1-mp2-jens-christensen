@@ -8,7 +8,7 @@
  Spelet startas med att denn männskliga spelaren skriver in sitt namn genom ett fält,
  och klickar på "Lägg till spelare".
 
- Där spelas till en av spelarna har fått X poeng.
+ Där spelas till en av spelarna har fått 3 poeng.
 
  Männskliga spelaren börjar med att välja sitt spel.
 
